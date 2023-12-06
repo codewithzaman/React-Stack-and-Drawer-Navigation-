@@ -31,14 +31,15 @@ const DrawerNav = ()=>{
       <Drawer.Navigator screenOptions={{
         statusBarColor: '#0163d2',
         headerStyle: {
-        backgroundColor: '#0163d2'
+        backgroundColor: '#ffffff'
         },
-        headerTintColor: '#fff',
+        headerTintColor: '#0163d2',
         headerTitleAlign: 'center',
+        headerShown: false
         }}>
-        <Drawer.Screen name='Home' component={HomeScreen}/>
-        <Drawer.Screen name='Profile' component={ProfileScreen}/>
-        <Drawer.Screen name='User' component={UserScreen}/>
+        <Drawer.Screen name='Home' component={StackNav}/>
+        {/* <Drawer.Screen name='Profile' component={ProfileScreen}/>
+        <Drawer.Screen name='User' component={UserScreen}/> */}
       </Drawer.Navigator>
   )
 }
