@@ -9,7 +9,14 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 const StackNav = ()=>{
   const Stack = createNativeStackNavigator();
   return (
-    <Stack.Navigator initialRouteName='Home'>
+    <Stack.Navigator initialRouteName='Home' screenOptions={{
+      statusBarColor: '#0163d2',
+      headerStyle: {
+      backgroundColor: '#0163d2'
+      },
+      headerTintColor: '#fff',
+      headerTitleAlign: 'center',
+      }}>
         <Stack.Screen name='Home' component={HomeScreen}/>
         <Stack.Screen name='Profile' component={ProfileScreen}/>
         <Stack.Screen name='User' component={UserScreen}/>
@@ -21,7 +28,14 @@ const StackNav = ()=>{
 const DrawerNav = ()=>{
   const Drawer = createDrawerNavigator();
   return (
-      <Drawer.Navigator>
+      <Drawer.Navigator screenOptions={{
+        statusBarColor: '#0163d2',
+        headerStyle: {
+        backgroundColor: '#0163d2'
+        },
+        headerTintColor: '#fff',
+        headerTitleAlign: 'center',
+        }}>
         <Drawer.Screen name='Home' component={HomeScreen}/>
         <Drawer.Screen name='Profile' component={ProfileScreen}/>
         <Drawer.Screen name='User' component={UserScreen}/>
